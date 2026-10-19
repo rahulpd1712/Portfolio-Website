@@ -1,0 +1,17 @@
+{
+  "name": "compiled-identity",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Compiled Identity - a project-first, mobile-friendly developer portfolio with a signature ball-to-code intro animation.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node test/intro.test.mjs",
+    "og": "node build/make-og-image.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
+}

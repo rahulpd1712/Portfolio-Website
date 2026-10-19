@@ -1,0 +1,362 @@
+/* Components: buttons, cards, badges, chips, reveal states, case study */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.97rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-ghost {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--accent);
+}
+
+.btn-ghost:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.text-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.text-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Badges + chips */
+
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.badge-status {
+  color: var(--muted);
+  background: var(--surface-2);
+}
+
+.badge-sample {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px 9px;
+}
+
+/* Project card */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(18px, 3vw, 26px);
+  transition:
+    border-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.section-alt .project-card {
+  background: var(--bg);
+}
+
+.project-card-top {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-size: 1.25rem;
+}
+
+.project-pitch {
+  color: var(--muted);
+  flex-grow: 1;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border);
+  margin-top: 4px;
+  padding-top: 14px;
+}
+
+/* Skills / education / notes */
+
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(16px, 2.5vw, 22px);
+}
+
+.section-alt .skill-group {
+  background: var(--bg);
+}
+
+.skill-group h3 {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-list li {
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+}
+
+.edu-item {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 16px;
+  margin-bottom: 18px;
+}
+
+.edu-item h3 {
+  font-size: 1.05rem;
+}
+
+.edu-meta {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.88rem;
+  margin-top: 4px;
+}
+
+.edu-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+.section-note {
+  margin-top: 14px;
+  background: var(--accent-soft);
+  border: 1px dashed var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  color: var(--text);
+  font-size: 0.93rem;
+}
+
+.copy-email {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.copy-status {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  min-width: 10ch;
+}
+
+/* Scroll reveal: only active when JS added reveal-ready to <html>.
+   Without JS everything is visible immediately. */
+
+html.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 480ms var(--ease),
+    transform 480ms var(--ease);
+}
+
+html.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Case study page */
+
+.case {
+  padding-block: var(--section-space);
+}
+
+.case-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: clamp(20px, 4vw, 32px);
+  margin-bottom: clamp(24px, 4vw, 40px);
+}
+
+.case-kicker {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.case-kicker a {
+  color: inherit;
+}
+
+.case h1 {
+  font-size: clamp(1.9rem, 5vw, 2.9rem);
+}
+
+.case-pitch {
+  color: var(--muted);
+  max-width: 62ch;
+  margin-top: 12px;
+  font-size: 1.05rem;
+}
+
+.case-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.case-body {
+  display: grid;
+  gap: clamp(22px, 4vw, 34px);
+}
+
+.case-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(18px, 3vw, 26px);
+}
+
+.case-block h2 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.case-block p,
+.case-block li {
+  color: var(--muted);
+}
+
+.case-block ul {
+  display: grid;
+  gap: 8px;
+}
+
+.case-block ul li {
+  padding-left: 20px;
+  position: relative;
+}
+
+.case-block ul li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+.case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+@media (min-width: 800px) {
+  .case-body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-block.case-wide {
+    grid-column: 1 / -1;
+  }
+}

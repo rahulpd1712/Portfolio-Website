@@ -1,0 +1,72 @@
+{
+  "site": {
+    "name": "Rahul Prasad",
+    "role": "CSE Student | Aspiring Software Engineer",
+    "pitch": "I build clean, working software and I’m learning to build it better every week.",
+    "email": "rahulpd1712@gmail.com",
+    "github": "https://github.com/rahulpd1712",
+    "linkedin": "https://www.linkedin.com/in/rahul-prasad-685564427/",
+    "resumeEnabled": false,
+    "canonical": "https://rahulpd1712.github.io/"
+  },
+  "seo": {
+    "title": "Rahul Prasad — CSE Student | Aspiring Software Engineer",
+    "description": "Portfolio of Rahul Prasad, a Computer Science student building clean, working software. Explore projects, skills, and contact information.",
+    "ogImage": "https://rahulpd1712.github.io/og-image.png"
+  },
+  "about": {
+    "paragraphs": [
+      "I am a Computer Science student who likes turning ideas into working products. I care about code that is honest about what it does, interfaces that work on a real phone, and explanations simple enough that someone else can maintain them.",
+      "I learn by building: small web applications, coursework projects, and side experiments that force me to read documentation, debug in earnest, and ship something another person can actually use.",
+      "Currently I am strengthening my frontend fundamentals and improving how I test and document my work."
+    ]
+  },
+  "projects": [
+    {
+      "slug": "sample-project",
+      "title": "Sample Project — Replace Me",
+      "sample": true,
+      "pitch": "One sentence describing what this project does and who it is for.",
+      "status": "Sample placeholder",
+      "problem": "[TODO] What problem does it solve, and for whom? Write this in plain language a non-expert recruiter can follow.",
+      "evidence": "[TODO] Link a live demo, video, screenshots, or exact execution instructions. Evidence beats adjectives.",
+      "repo": "https://github.com/rahulpd1712",
+      "repoLabel": "github.com/rahulpd1712",
+      "demo": "",
+      "stack": ["HTML", "CSS", "JavaScript", "Vite"],
+      "contribution": "[TODO] Exactly what you built. For team projects, be precise about your part.",
+      "completedFeatures": [
+        "Feature that works today and can be demonstrated right now",
+        "Another finished feature you can show in a screenshot or demo"
+      ],
+      "plannedFeatures": [
+        "Feature that is designed but not built yet — clearly marked as planned"
+      ],
+      "limitations": [
+        "Honest constraint or missing functionality, stated without excuses"
+      ],
+      "decisions": "[TODO] Why you chose this stack, architecture, or data model.",
+      "challenge": "[TODO] One real problem you hit during the build and how you solved it.",
+      "results": "[TODO] Only real, verifiable outcomes: tests, deployments, users, measured improvements. Delete this line if you have none yet."
+    }
+  ],
+  "skills": [
+    { "name": "Languages", "items": ["HTML", "CSS", "JavaScript", "Python"] },
+    { "name": "Frontend", "items": ["Responsive design", "Accessibility", "Tailwind CSS", "React"] },
+    { "name": "Backend", "items": ["Node.js", "Express", "REST APIs"] },
+    { "name": "Databases", "items": ["MongoDB", "PostgreSQL", "Firebase"] },
+    { "name": "Tools", "items": ["Git", "GitHub", "VS Code", "Vercel", "Figma"] },
+    { "name": "Concepts", "items": ["Data structures", "Algorithms", "Debugging", "Testing", "Git workflow"] }
+  ],
+  "education": [
+    {
+      "degree": "B.Tech / B.E. in Computer Science",
+      "school": "[Your University or College]",
+      "years": "[20XX – 20XX]",
+      "note": "[TODO] Relevant coursework, activities, hackathons, or open source work."
+    }
+  ],
+  "notes": {
+    "sample": "This sample case study exists to show the required structure. Replace it in content/site.json before publishing."
+  }
+}
